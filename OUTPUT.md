@@ -13,8 +13,9 @@
 
 ==> TextInput
 
-
+![Screenshot (523)](https://user-images.githubusercontent.com/79536918/144837594-b11f2bac-7954-4872-b4c8-8e1aa38e9a91.png)
 
 
 ==> ScrollView
 
+![Screenshot (524)](https://user-images.githubusercontent.com/79536918/144837601-d8681601-3c30-4a8c-818f-04466b6fddfa.png)
