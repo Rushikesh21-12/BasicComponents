@@ -26,6 +26,7 @@
 ![Screenshot (525)](https://user-images.githubusercontent.com/79536918/145029602-fde96c3c-9575-4d99-9ea9-cbc7cd30dc7d.png)
 
 
-Counter and Add Color app with state
+==> Counter and Add Color app with state
+
 ![Add Color](https://user-images.githubusercontent.com/79536918/145029640-7d426547-9915-4e79-81df-94f1be3c8297.png)
 ![Counter](https://user-images.githubusercontent.com/79536918/145029648-0d2fe50d-7233-4702-9283-9fdb8e2ea715.png)
