@@ -1,35 +1,59 @@
-import React, { useState } from "react";
+import React, { useReducer } from "react";
 import { View, Text, StyleSheet } from "react-native";
 
 import ColorCounter from "../components/ColorCounter";
 
 const CHANGE_IN_COLOR = 10
 
+const reducer = (state, action) =>{
+    switch(action.type){
+        case 'change_red':
+            return state.red + action.payload > 255 || state.red + action.payload < 0
+                ? state
+                : {...state, red: state.red + action.payload}
+
+        case 'change_green':
+            return state.green + action.payload > 255 || state.green + action.payload < 0
+                ? state
+                : {...state, green: state.green + action.payload}
+
+        case 'change_blue':
+            return state.blue + action.payload > 255 || state.blue + action.payload < 0
+                ? state
+                : {...state, blue: state.blue + action.payload}
+
+        default:
+            return state
+
+    }
+}
+
 export default function SuqareScreen(){
 
-    const [red, setRed] = useState(0)
-    const [green, setGreen] = useState(0)
-    const [blue, setBlue] = useState(0)
+    const [state, dispatch] = useReducer(reducer, { red: 0, green: 0, blue: 0})
+    const {red, green, blue} = state
 
     return(
         <View>
             <ColorCounter 
                 colorName = 'Red'
-                onIncrease = {() => setRed(red + CHANGE_IN_COLOR)}
-                onDecrease = {() => setRed(red - CHANGE_IN_COLOR)}
+                onIncrease = {() => dispatch({type: 'change_red', payload: CHANGE_IN_COLOR})}
+                onDecrease = {() => dispatch({type: 'change_red', payload: -1 * CHANGE_IN_COLOR})}
             />
             <ColorCounter 
                 colorName = 'Green'
-                onIncrease = {() => setGreen(green + CHANGE_IN_COLOR)}
-                onDecrease = {() => setGreen(green - CHANGE_IN_COLOR)}
+                onIncrease = {() => dispatch({type: 'change_green', payload: CHANGE_IN_COLOR})}
+                onDecrease = {() => dispatch({type: 'change_green', payload: -1 * CHANGE_IN_COLOR})}
             />
             <ColorCounter 
                 colorName = 'Blue'
-                onIncrease = {() => setBlue(blue + CHANGE_IN_COLOR)}
-                onDecrease = {() => setBlue(blue - CHANGE_IN_COLOR)}
+                onIncrease = {() => dispatch({type: 'change_blue', payload: CHANGE_IN_COLOR})}
+                onDecrease = {() => dispatch({type: 'change_blue', payload: -1 * CHANGE_IN_COLOR})}
             />
 
             <View style = {{ height: 100, width: 100, backgroundColor: `rgb(${red},${green},${blue})`}}></View>
+
+            <Text>`rgb(${red},${green},${blue})`</Text>
         </View>
     )
 }
