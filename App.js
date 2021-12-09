@@ -12,6 +12,9 @@ import SuqareScreen from "./src/screens/SquareScreen";
 import FixedDimension from "./src/screens/FixedDimension";
 import PercentageDimenaion from "./src/screens/PercentageDimension";
 import FlexDimension from "./src/screens/FlexDimension";
+import AlignItems from "./src/screens/AlignItems";
+import JustifyContent from "./src/screens/JustiFyContent";
+import CustomFonts from "./src/screens/CustomFonts";
 
 export default function App(){
   return(
@@ -28,9 +31,12 @@ export default function App(){
         <SuqareScreen/>        // Set Color app
         <FixedDimension/>      // height and wifht fixed dimension
         <PercentageDimenaion/> // height and width with percentage dimension
+        <FlexDimension/>       // height and width with flex dimension
+        <AlignItems/>
+        <JustifyContent/>
       */}
    
-      <FlexDimension/>
+      <CustomFonts/>
 
     </View>
   )
