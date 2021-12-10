@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet} from 'react-native';
+import { View, Text, StyleSheet, Image} from 'react-native';
 
 export default function CustomFonts() {
     return(
@@ -8,6 +8,9 @@ export default function CustomFonts() {
             <Text style = {styles.customFontTwo}>Custom font style 2</Text>
             <Text style = {styles.customFontThree}>Custom font style 3</Text>
             <Text style = {styles.customFontFour}>Custom font style 4</Text>
+
+            <Image source={{uri: 'https://reactjs.org/logo-og.png'}}
+       style={{width: 400, height: 400}} />
         </View>
     )
 }

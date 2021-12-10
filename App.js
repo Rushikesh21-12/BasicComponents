@@ -15,6 +15,11 @@ import FlexDimension from "./src/screens/FlexDimension";
 import AlignItems from "./src/screens/AlignItems";
 import JustifyContent from "./src/screens/JustiFyContent";
 import CustomFonts from "./src/screens/CustomFonts";
+import SelectorOrPicker from "./src/screens/SelectorOrPicker";
+import WebViewScreen from "./src/screens/WebView";
+import Dialogs from "./src/screens/Dialogs";
+import CalendarAndDatePicker from "./src/screens/CalendarAndDatePicker";
+import SwitchScreen from "./src/screens/Switch";
 
 export default function App(){
   return(
@@ -34,9 +39,14 @@ export default function App(){
         <FlexDimension/>       // height and width with flex dimension
         <AlignItems/>
         <JustifyContent/>
+        <CustomFonts/>
+        <SelectorOrPicker/>
+        <WebViewScreen/>
+        <Dialogs/>
+        <SwitchScreen/>
       */}
    
-      <CustomFonts/>
+      <CalendarAndDatePicker/>
 
     </View>
   )

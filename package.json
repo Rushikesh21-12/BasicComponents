@@ -10,8 +10,16 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@paraboly/react-native-report-modal": "^0.0.12",
+    "@react-native-community/cli": "^6.3.1",
+    "@react-native-picker/picker": "^2.2.1",
     "react": "17.0.2",
-    "react-native": "0.66.3"
+    "react-native": "0.66.3",
+    "react-native-calendar-picker": "^7.1.2",
+    "react-native-calendars": "^1.1271.0",
+    "react-native-datepicker": "^1.7.2",
+    "react-native-dialog": "^9.2.0",
+    "react-native-webview": "^11.15.0"
   },
   "devDependencies": {
     "@babel/core": "7.16.0",
