@@ -20,6 +20,11 @@ import WebViewScreen from "./src/screens/WebView";
 import Dialogs from "./src/screens/Dialogs";
 import CalendarAndDatePicker from "./src/screens/CalendarAndDatePicker";
 import SwitchScreen from "./src/screens/Switch";
+import DateTimePickerScreen from "./src/screens/DateTimePicker";
+import SpinnerScreen from "./src/screens/SpinnerScreen";
+import ImagePickerScreen from "./src/screens/ImagePicker";
+import TouchablesScreen from "./src/screens/TouchablesScreen";
+import KeyboardHandling from "./src/screens/KeyboardHandling";
 
 export default function App(){
   return(
@@ -44,10 +49,15 @@ export default function App(){
         <WebViewScreen/>
         <Dialogs/>
         <SwitchScreen/>
+        <CalendarAndDatePicker/>
+        <DateTimePickerScreen/>
+        <SpinnerScreen/>
+        <ImagePickerScreen/>
+        <TouchablesScreen/>
       */}
    
-      <CalendarAndDatePicker/>
-
+      <KeyboardHandling/>
+      
     </View>
   )
 }
